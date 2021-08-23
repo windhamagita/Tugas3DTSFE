@@ -10,8 +10,8 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
-      href="style.css"
-    />
+      href="style.css"/>
+      
     <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=uCwGqug3ECiwAdpZA_-O7gULBng3r0M9YW-dfgphY_zhP6J8PX-5N1qb5sBhM7LQ4-ikYja52tmCNm15Rbdheg" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
     
@@ -44,24 +44,21 @@
           class="form-control mb-4"
           placeholder="some number"
           onkeypress="validate(event)"
-          onkeyup="conv()"
-        />
-        <p class="h6 mb-4">=</p>
+          onkeyup="conv()"/>
+          
+          <p class="h6 mb-4">=</p>
+
         <input
           type="number"
           id="result"
           class="form-control mb-4"
           placeholder="result"
-          disabled
-        />
+          disabled/>
       </form>
-      Change Background Color : <input class="form-control" id="color" /><button
-        type="button"
-        class="btnklik"
-        onclick="change()"
-      >
-        Change
-      </button>
+      
+      <input class="form-control" id="color" />
+
+      <button type="button" class="btnklik" onclick="change()">Change</button>
     </div>
   </body>
   <script src="sources.js"></script>
@@ -69,12 +66,12 @@
     $(document).ready(function () {
       var interval = setInterval(function () {
         var momentNow = moment();
-        $("#date-part").html(
+        $("#date").html(
           momentNow.format("YYYY MMMM DD") +
             " " +
             momentNow.format("dddd").substring(0, 3).toUpperCase()
         );
-        $("#time-part").html(momentNow.format("A hh:mm:ss"));
+        $("#time").html(momentNow.format("A hh:mm:ss"));
       }, 100);
     });
     function validate(evt) {
